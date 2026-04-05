@@ -78,16 +78,33 @@ Use this template when generating Section 15 of the blueprint. Fill in every sec
 3. {Rule 3}
 4. {Rule 4}
 5. {Rule 5}
+
+## Reference Document
+
+See `blueprint.md` in this directory for the full architecture detail:
+full data model, API spec, component hierarchy, deployment strategy, and testing plan.
 ```
 
 ---
 
 ## Guidelines for Generating CLAUDE.md
 
-- Keep it under 120 lines. Dense, scannable, no fluff.
+- Target 80–120 lines. Dense, scannable, no fluff.
 - Commands section first — the builder needs to know how to run things immediately.
 - Tech stack as a single line — quick reference, not a table.
 - Architecture section should explain HOW things connect, not just list folders.
 - Code organization rules must be specific and actionable — "keep files short" is bad, "max 300 lines per component" is good.
 - Design system must include actual values (hex codes, px sizes) not vague descriptions.
-- Reglas are non-negotiable constraints. Include only rules that, if broken, would cause real problems.
+- Rules are non-negotiable constraints. Include only rules that, if broken, would cause real problems.
+- Always end with the `## Reference Document` section pointing to `blueprint.md`.
+
+### What to Cut When the Project is Complex (120+ lines)
+
+If a complex project is pushing the CLAUDE.md past 120 lines, trim in this priority order:
+
+1. **Cut first:** Verbose architecture prose — replace with tighter bullet points
+2. **Cut second:** Directory structure entries for obvious folders (no need to explain `public/`)
+3. **Cut third:** Design system details that are fully defined in CSS variables — reference the file instead of repeating values
+4. **Never cut:** Commands, environment variables, key patterns, rules, and the reference document pointer
+
+The goal is a file the builder reads once and fully internalizes — not an exhaustive spec. The exhaustive spec lives in `blueprint.md`.

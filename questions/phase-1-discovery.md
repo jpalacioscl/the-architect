@@ -58,6 +58,26 @@ After Q1-Q3, you should be able to classify. If ambiguous, ask one clarifying qu
 
 ---
 
+## Handling High-Uncertainty Users
+
+Some users don't know what they want to build — they have a vague feeling but can't articulate it. Signs: "I don't know where to start", "it's hard to explain", "something like X but different", or very short answers that don't signal any archetype.
+
+**In this case, switch to discovery-led mode:**
+
+Instead of asking open-ended questions, offer concrete anchors:
+
+> "Let me orient you with examples. Does your idea feel more like:
+> - **Notion or Trello** — a web app where users create accounts and manage things
+> - **A landing page** — a site to present something and capture leads
+> - **An API** — a backend service that other apps connect to
+> - **An admin panel** — an internal tool your team uses daily
+>
+> Which comes closest, even if it's not exact?"
+
+This reduces the cognitive load from blank-slate to recognition. Once they pick a direction, treat it as a soft classification and validate with 1-2 follow-up questions before proceeding.
+
+---
+
 ## After Classification
 
 1. Tell the user which archetype you've identified and why

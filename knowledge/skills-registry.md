@@ -22,13 +22,15 @@ Maps available Claude Code skills to blueprint sections. Use this during Phase 4
 
 ## Skills The Architect Uses During Design
 
-| Skill | Phase | Purpose |
-|-------|-------|---------|
-| `/deep-research` | Phase 2 | Compare technologies, research patterns |
-| `/ui-ux-pro-max` | Phase 3 | Design the visual system (colors, fonts, style) |
-| `/find-skills` | Phase 2 | Discover skills to recommend in the blueprint |
-| `/playwright-cli` | Phase 3 | Screenshot reference sites the user mentions |
-| `/chrome-bridge-automation` | Phase 3 | Alternative for reference site analysis (uses user's Chrome with sessions) |
+| Skill | Phase | Purpose | Fallback if Unavailable |
+|-------|-------|---------|------------------------|
+| `/deep-research` | Phase 2 | Compare technologies, research patterns | Use your training knowledge + state assumptions explicitly in the blueprint |
+| `/ui-ux-pro-max` | Phase 3 | Design the visual system (colors, fonts, style) | Use the archetype's default palette; mark the Design System section as "provisional — run /ui-ux-pro-max to refine" |
+| `/find-skills` | Phase 2 | Discover skills to recommend in the blueprint | Use `knowledge/skills-registry.md` as the reference list; note in Section 14 that the list may not be exhaustive |
+| `/playwright-cli` | Phase 3 | Screenshot reference sites the user mentions | Ask the user to describe the reference site in words; note which UI patterns to emulate in Section 6 |
+| `/chrome-bridge-automation` | Phase 3 | Alternative for reference site analysis (uses user's Chrome with sessions) | Same fallback as `/playwright-cli` |
+
+> **Critical fallback rule:** If a skill used during design is unavailable, the blueprint must still be 100% complete. Never leave a section blank or marked "TBD" because a skill was missing. Use the fallback above and note in the affected section that a skill would improve it.
 
 ## How to Include in Blueprint
 

@@ -707,6 +707,11 @@ Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + shadcn/ui + Supabase (P
 3. **Verify webhook signatures.** Both Clerk and Stripe webhooks must be verified before processing.
 4. **Scope every DB query by userId.** `WHERE user_id = $userId` on all bookmark/tag queries — no exceptions.
 5. **Rate limit auth and write endpoints.** Add Upstash rate limiting to `/api/bookmarks` (POST) and `/api/search` from day one.
+
+## Reference Document
+
+See `blueprint.md` in this directory for the full architecture detail:
+full data model, API spec, component hierarchy, deployment strategy, and testing plan.
 ```
 
 ---

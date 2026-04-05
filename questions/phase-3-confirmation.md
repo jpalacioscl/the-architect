@@ -40,4 +40,4 @@ Once the user confirms (or you've integrated their feedback):
 1. State: "I'll generate your blueprint now."
 2. Proceed to Phase 4: GENERATE.
 
-If the user has significant changes, adjust and re-present. Don't loop more than twice — if alignment is hard, ask what the sticking point is directly.
+If the user has significant changes, adjust and re-present. Keep iterating until they confirm — don't impose an artificial limit. If after 2+ rounds alignment is still elusive, ask directly: "What's the sticking point — the tech choices, the scope, or something else?" Identify the root of the disagreement rather than pushing forward.
