@@ -1,5 +1,7 @@
 # Generated blueprints (user-specific, not for repo)
 output/*.md
+# Exception: example blueprints bundled with the repo
+!output/example-*.md
 
 # OS files
 .DS_Store

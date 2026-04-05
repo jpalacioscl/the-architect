@@ -73,6 +73,8 @@
 ---
 
 ## 5. API Design
+> **Conditional:** Required for saas-webapp, api-backend, mobile-app, content-platform (with UGC), internal-tool.
+> For marketing-site with no backend: write "N/A — static site, no API layer."
 
 ### Routes Overview
 | Method | Path | Description | Auth |
@@ -85,6 +87,8 @@
 ---
 
 ## 6. Frontend Architecture
+> **Conditional:** Required for saas-webapp, marketing-site, mobile-app, internal-tool, content-platform.
+> For api-backend with no UI: write "N/A — headless API, no frontend layer."
 
 ### Pages / Routes
 | Route | Page | Description |
@@ -102,6 +106,8 @@
 ---
 
 ## 7. Design System
+> **Conditional:** Required for any project with a UI (saas-webapp, marketing-site, mobile-app, internal-tool, content-platform).
+> For api-backend with no UI: write "N/A — no frontend layer."
 
 ### Colors
 | Role | Hex | Usage |
@@ -134,6 +140,8 @@
 ---
 
 ## 8. Authentication & Authorization
+> **Conditional:** Required when the project has user accounts, roles, or protected resources.
+> For public-only marketing sites or fully open APIs: write "N/A — no authentication required."
 
 ### Auth Flow
 {Sign-up → verify → onboard → dashboard flow}

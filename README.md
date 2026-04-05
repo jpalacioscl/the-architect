@@ -132,7 +132,7 @@ Don't see your project type? The Architect adapts — these are starting points,
 
 ```bash
 # Clone this repo
-git clone https://github.com/Hainrixz/the-architect.git
+git clone git@github.com:Hainrixz/the-architect.git
 
 # Open the project in Claude Code
 cd the-architect
@@ -161,12 +161,21 @@ You: I want to build a SaaS for managing restaurant reservations
 ```bash
 # Create your new project
 mkdir ~/my-restaurant-saas
-cp output/restaurant-saas-blueprint.md ~/my-restaurant-saas/CLAUDE.md
+
+# Copy the generated CLAUDE.md (extracted from Section 15 of the blueprint)
+cp output/restaurant-saas-CLAUDE.md ~/my-restaurant-saas/CLAUDE.md
+
+# Keep the full blueprint as a reference document
+cp output/restaurant-saas-blueprint.md ~/my-restaurant-saas/blueprint.md
 
 # Open it in Claude Code — it builds everything from the blueprint
 cd ~/my-restaurant-saas
 claude
 ```
+
+> **Two output files are generated:**
+> - `output/<name>-blueprint.md` — the full 16-section reference document
+> - `output/<name>-CLAUDE.md` — the ready-to-use CLAUDE.md for the builder (extracted from Section 15)
 
 ### Fast-Track Mode
 
@@ -370,7 +379,7 @@ No ves tu tipo de proyecto? The Architect se adapta — estos son puntos de part
 
 ```bash
 # Clona este repo
-git clone https://github.com/Hainrixz/the-architect.git
+git clone git@github.com:Hainrixz/the-architect.git
 
 # Abre el proyecto en Claude Code
 cd the-architect
@@ -399,12 +408,21 @@ Tu: Quiero construir un SaaS para manejar reservaciones de restaurante
 ```bash
 # Crea tu nuevo proyecto
 mkdir ~/mi-saas-restaurante
-cp output/restaurant-saas-blueprint.md ~/mi-saas-restaurante/CLAUDE.md
+
+# Copia el CLAUDE.md generado (extraído de la Sección 15 del blueprint)
+cp output/restaurant-saas-CLAUDE.md ~/mi-saas-restaurante/CLAUDE.md
+
+# Guarda el blueprint completo como referencia
+cp output/restaurant-saas-blueprint.md ~/mi-saas-restaurante/blueprint.md
 
 # Abrelo en Claude Code — construye todo desde el blueprint
 cd ~/mi-saas-restaurante
 claude
 ```
+
+> **Se generan dos archivos de salida:**
+> - `output/<nombre>-blueprint.md` — el documento de referencia completo con las 16 secciones
+> - `output/<nombre>-CLAUDE.md` — el CLAUDE.md listo para usar por el constructor (extraído de la Sección 15)
 
 ### Modo Rapido
 

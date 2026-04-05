@@ -21,11 +21,11 @@ After classifying the project in Phase 1, use the matching section below. Ask 3-
 ### Q5: Integrations
 "Any third-party integrations? (email sending, calendar, Stripe, Slack, external APIs)"
 
-**Building blocks to load based on answers:**
-- If auth needed → `knowledge/building-blocks/auth-patterns.md`
-- If payments → load Stripe patterns from archetype
-- If real-time → `knowledge/building-blocks/state-management.md`
-- Always load → `knowledge/building-blocks/database-patterns.md`
+**Read these files before answering questions in this section:**
+- If auth needed → Read `knowledge/building-blocks/auth-patterns.md`
+- If payments → Read the billing section of `knowledge/archetypes/saas-webapp.md`
+- If real-time → Read `knowledge/building-blocks/state-management.md`
+- Always → Read `knowledge/building-blocks/database-patterns.md`
 
 ---
 
@@ -46,10 +46,10 @@ After classifying the project in Phase 1, use the matching section below. Ask 3-
 ### Q5: Multilingual
 "Single language or multilingual?"
 
-**Building blocks to load:**
-- If CMS needed → `knowledge/building-blocks/frontend-stacks.md` (Astro/Next.js comparison)
+**Read these files before answering questions in this section:**
+- If CMS needed → Read `knowledge/building-blocks/frontend-stacks.md` (Astro/Next.js comparison)
 - If SEO priority → note `/seo-audit` skill for build phase
-- Always load → `knowledge/building-blocks/deployment-patterns.md`
+- Always → Read `knowledge/building-blocks/deployment-patterns.md`
 
 ---
 
@@ -70,10 +70,10 @@ After classifying the project in Phase 1, use the matching section below. Ask 3-
 ### Q5: Backend
 "Does this connect to an existing API, or do we need to design the backend too?"
 
-**Building blocks to load:**
-- If needs backend → `knowledge/building-blocks/api-design-patterns.md`
-- Always load → `knowledge/building-blocks/auth-patterns.md` (mobile auth patterns)
-- If offline → `knowledge/building-blocks/state-management.md`
+**Read these files before answering questions in this section:**
+- If needs backend → Read `knowledge/building-blocks/api-design-patterns.md`
+- Always → Read `knowledge/building-blocks/auth-patterns.md` (mobile auth patterns)
+- If offline → Read `knowledge/building-blocks/state-management.md`
 
 ---
 
@@ -94,11 +94,11 @@ After classifying the project in Phase 1, use the matching section below. Ask 3-
 ### Q5: Scale & Performance
 "Expected request volume? Any caching or rate limiting needs?"
 
-**Building blocks to load:**
-- Always → `knowledge/building-blocks/api-design-patterns.md`
-- Always → `knowledge/building-blocks/database-patterns.md`
-- If background jobs → `knowledge/building-blocks/deployment-patterns.md`
-- If auth → `knowledge/building-blocks/auth-patterns.md`
+**Read these files before answering questions in this section:**
+- Always → Read `knowledge/building-blocks/api-design-patterns.md`
+- Always → Read `knowledge/building-blocks/database-patterns.md`
+- If background jobs → Read `knowledge/building-blocks/deployment-patterns.md`
+- If auth → Read `knowledge/building-blocks/auth-patterns.md`
 
 ---
 
@@ -119,10 +119,10 @@ After classifying the project in Phase 1, use the matching section below. Ask 3-
 ### Q5: Reporting
 "Do you need exports (CSV, PDF) or reporting/analytics features?"
 
-**Building blocks to load:**
-- If existing database → `knowledge/building-blocks/database-patterns.md`
-- If roles → `knowledge/building-blocks/auth-patterns.md`
-- Always → `knowledge/building-blocks/frontend-stacks.md`
+**Read these files before answering questions in this section:**
+- If existing database → Read `knowledge/building-blocks/database-patterns.md`
+- If roles → Read `knowledge/building-blocks/auth-patterns.md`
+- Always → Read `knowledge/building-blocks/frontend-stacks.md`
 
 ---
 
@@ -143,8 +143,8 @@ After classifying the project in Phase 1, use the matching section below. Ask 3-
 ### Q5: Monetization
 "How is this monetized? Ads, subscriptions, gated content, sponsorships, or free?"
 
-**Building blocks to load:**
-- If user-generated → `knowledge/building-blocks/auth-patterns.md`
-- If search → `knowledge/building-blocks/database-patterns.md` (full-text search)
-- If monetization → load payment patterns
-- Always → `knowledge/building-blocks/frontend-stacks.md`
+**Read these files before answering questions in this section:**
+- If user-generated content → Read `knowledge/building-blocks/auth-patterns.md`
+- If search → Read `knowledge/building-blocks/database-patterns.md` (full-text search section)
+- If monetization → Read billing section of `knowledge/archetypes/saas-webapp.md`
+- Always → Read `knowledge/building-blocks/frontend-stacks.md`

@@ -47,8 +47,31 @@ Ask for confirmation or adjustments before generating.
 2. Read `templates/claude-md-template.md`
 3. Read `knowledge/skills-registry.md`
 4. Compose the complete blueprint filling every section
-5. Write to `output/<project-name>-blueprint.md`
-6. Present a summary to the user with the file path
+5. Write the full blueprint to `output/<project-name>-blueprint.md`
+6. Extract Section 15 content and write it separately to `output/<project-name>-CLAUDE.md`
+7. Run the self-validation checklist below before presenting to the user
+8. Present a summary to the user with both file paths
+
+**Phase 4 Self-Validation Checklist** — verify before delivering:
+- [ ] Section 9 (Build Order) has numbered steps with exact commands, not vague descriptions
+- [ ] Section 15 (CLAUDE.md) is complete — not left as a template with unfilled placeholders
+- [ ] Section 15 was also written to `output/<project-name>-CLAUDE.md` as a standalone file
+- [ ] Every section relevant to the archetype is filled (conditional sections are either filled or explicitly marked N/A)
+- [ ] Tech stack table has a "Why" rationale for every row — no empty cells
+- [ ] Environment variables table lists every required `VAR_NAME` with instructions on where to get it
+- [ ] Build Order references actual file names and commands, not generic phrases like "build the frontend"
+- [ ] No section still contains placeholder text like `{fill this}` or `{example}`
+
+### Phase 5: ITERATE (for updating existing blueprints)
+
+If the user wants to update a previously generated blueprint:
+
+1. Read the existing file from `output/<project-name>-blueprint.md`
+2. Identify which sections need to change based on the user's feedback
+3. Apply targeted changes — do NOT regenerate the entire blueprint unless the scope changed fundamentally
+4. Re-run the Phase 4 self-validation checklist on the updated sections
+5. Overwrite both `output/<project-name>-blueprint.md` and `output/<project-name>-CLAUDE.md`
+6. Tell the user exactly what changed (bullet list of modified sections)
 
 ---
 
@@ -74,11 +97,13 @@ Ask for confirmation or adjustments before generating.
 3. **ALWAYS present the architecture for user confirmation** before generating the blueprint.
 4. **The blueprint must be 100% self-contained.** A Claude Code instance with ZERO prior context must be able to build from it without asking clarifying questions.
 5. **ALWAYS include a numbered build order** in the blueprint. Step 1, Step 2, etc. This is the most critical section.
-6. **ALWAYS include a complete CLAUDE.md** for the target project inside the blueprint.
-7. **Save every blueprint** to `output/<project-name>-blueprint.md`.
-8. **Detect the user's language** from their first message. Use that language for all interaction and the blueprint itself.
+6. **ALWAYS include a complete CLAUDE.md** for the target project inside the blueprint (Section 15) AND write it as a separate file `output/<project-name>-CLAUDE.md`.
+7. **Save every blueprint** to `output/<project-name>-blueprint.md`. Always write two output files.
+8. **Detect the user's language** from their first message. Use that language for all interaction and the blueprint itself — including section titles in the CLAUDE.md.
 9. **Be opinionated.** Recommend what you believe is best with rationale. Don't present 5 options and ask the user to pick — present your recommendation and explain why.
 10. **Fast-track mode:** If the user says "just build it" or wants to skip questions, ask only 3 essential questions (what is it, who is it for, tech preference) and use smart defaults for everything else.
+11. **Skip inapplicable sections.** For API-only projects, mark Sections 6 and 7 as N/A. For projects with no auth, mark Section 8 as N/A. Never leave placeholder text in sections that don't apply — write "N/A — [reason]" instead.
+12. **Non-JS stacks are valid.** If the user prefers Python, Go, Rust, or another language, apply the same 4-phase workflow with equivalent stack decisions. The archetypes provide JS defaults; deviate with rationale when appropriate.
 
 ---
 

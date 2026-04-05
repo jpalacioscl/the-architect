@@ -2,6 +2,8 @@
 
 Maps available Claude Code skills to blueprint sections. Use this during Phase 4 (Generate) to recommend the right skills for the build phase.
 
+> **Important:** This registry is a static reference — it may become outdated as new skills are published or removed. Always run `/find-skills` once during Phase 2 to discover the current available set and cross-reference with this file. If `/find-skills` returns skills not listed here, add them to Section 14 of the blueprint when relevant.
+
 ## Skills for Blueprint Recommendations
 
 | Skill | Blueprint Section | When to Recommend | What It Does |

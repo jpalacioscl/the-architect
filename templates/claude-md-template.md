@@ -70,7 +70,8 @@ Use this template when generating Section 15 of the blueprint. Fill in every sec
 |----------|-------------|
 | `{VAR}` | {what it's for} |
 
-## Reglas No Negociables
+## {RULES_SECTION_TITLE}
+{Use the user's language: "Non-Negotiable Rules" / "Reglas No Negociables" / etc.}
 
 1. {Rule 1}
 2. {Rule 2}
