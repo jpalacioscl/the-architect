@@ -7,7 +7,6 @@
     Describe what you want to build. Get a complete blueprint. Let Claude Code build it for you.
   </p>
   <p align="center">
-
     <a href="#english">English</a> &middot;
     <a href="#español">Español</a>
   </p>
